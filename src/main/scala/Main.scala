@@ -19,12 +19,12 @@ object Main {
 
     val max_engineHP = csvInput
       .map(x => (x.Make, x.Year, x.Engine_HP))
-      .groupBy(1)
+      .groupBy(0, 1)
       .max(2)
 
     val min_engineHP = csvInput
       .map(x => (x.Make, x.Year, x.Engine_HP))
-      .groupBy(1)
+      .groupBy(0, 1)
       .min(2)
 
     max_engineHP.print()
